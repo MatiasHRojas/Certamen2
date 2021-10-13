@@ -1,0 +1,58 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+.material-icons.delete {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+h1 {
+  padding: 20px;
+}
+
+h5 {
+  margin-left: 10px;
+}
+
+#contenedor {
+  padding: 20px;
+}
+
+#imgperfil {
+  width: 138px;
+  height: 130px;
+}
+
+#addCurso {
+  text-align: center;
+  line-height: 20px;
+  font-size: 25px;
+  display: block;
+  width: 43px;
+  height: 42px;
+  border-radius: 50%;
+  border: solid 2px #999999;
+}
+/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ficha Estudiante</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="css/estilos.css" rel="stylesheet">
+
+        <!-- fuentes externas icons-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <h1>Ficha del estudiante</h1>
+
+        <div id="contenedor" class="container-fluid">
+            <form id="formulario">
+                <div class="row">
+
+                    <!--       1era Columna       -->
+
+                    <div class="col-sm-5">
+                        <div class="row mb-5">
+                            <h5 class="col-sm-4">Matías Henríquez</h5>
+                            <button id="editar" type="button" class="col-sm-2">Editar</button>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label id="inputRut" class="col-sm-4 col-form-label">Rut:</label>              
+                            <div class="col">
+                                <input type="text" value="12345678-9" class="form-control" id="rut" maxlength="15" required readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label id="inputPhone" class="col-sm-4 col-form-label">Teléfono:</label>              
+                            <div class="col">
+                                <input type="number" value="912345678" class="form-control" id="numero" required readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label id="inputEmail" class="col-sm-4 col-form-label">Correo Electrónico</label>              
+                            <div class="col">
+                                <input type="email" value="mathihrojas@gmail.com" class="form-control" id="mail" maxlength="50" required readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label id="inputAcudientes" class="col-sm-4 col-form-label">Acudientes</label>              
+                            <div class="col">
+                                <input type="text" value="Ninguno" class="form-control" id="acudientes" maxlength="50" required readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label id="inputFechaN" class="col-sm-4 col-form-label">Fecha de Nacimiento</label>              
+                            <div class="col">
+                                <input type="date" value="1999-11-12" class="form-control" id="fnac" required readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label id="inputRegion" class="col-sm-4 col-form-label">Region</label>              
+                            <div class="col">
+                                <select id="region" class="col-sm-6 col-form-label">
+                                    <option id="region1">Valparaíso</option>
+                                    <option id="region2" disabled>Coquimbo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label id="inputComuna" class="col-sm-4 col-form-label">Comuna</label>              
+                            <div class="col">
+                                <select id="comuna" class="col-sm-6 col-form-label">
+                                    <option id="comuna1">Valparaíso</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <label id="inputDireccion" class="col-sm-4 col-form-label">Dirección</label>              
+                            <div class="col">
+                                <input type="text" value="Los Carrera #1234" class="form-control" id="direccion" maxlength="50" required readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div id="divActualizar" class="col-sm-3">
+                                <button id="actualizar" type="submit" disabled>Actualizar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--       2da Columna       -->
+
+                    <div class="col-sm-6">
+
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <img id="imgperfil" src="imgs/imgperfil.PNG" alt="descripcion">
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="row mb-3">
+                                    <label id="inputCurso" class="col-sm-4 col-form-label">Curso</label>              
+                                    <div class="col">
+                                        <input type="text" value="3ero Secudaria" class="form-control" id="curso" maxlength="20" required readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-sm-1">
+                                <button id="addCurso" type="button" disabled>+</button>
+                            </div>
+                            <div class="col-sm-10">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Asignaturas</th>
+                                        <th scope="col">Objetivos</th>
+                                        <th scope="col">Notas</th>
+                                        <th scope="col"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+                                      <tr>
+                                        <td>Matemáticas</td>
+                                        <td>Comprensión</td>
+                                        <td>6.0</td>
+                                        <td><button type="button" class="material-icons delete">delete</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Física</td>
+                                        <td>Lógica</td>
+                                        <td>7.0</td>
+                                        <td><button type="button" class="material-icons delete">delete</button></td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>Español</td>
+                                        <td>Gramática</td>
+                                        <td>7.0</td>
+                                        <td><button type="button" class="material-icons delete">delete</button></td>
+
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+
+                        </div>
+                        <div id="opcionAgregar">
+                            <div class="row mb-3">
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="newAsignatura" maxlength="20" placeholder="Asignatura" required readonly>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="newObjetivo" maxlength="20" placeholder="Objetivos" required readonly>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="newNota" maxlength="20" placeholder="Nota" required readonly>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-4">
+                                    <button id="agregar" type="button" disabled>Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+
+        <script src="js/inicio.js" async></script>
+        <!--bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </body>
+</html>
